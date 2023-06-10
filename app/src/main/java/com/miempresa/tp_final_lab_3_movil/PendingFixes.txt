@@ -1,0 +1,18 @@
+
+imagen
+Menu activity 54
+Propietario 84-90 ; 14;25;17
+
+dni a string
+Propietario 8;17;36;40
+
+ApiCLient
+Datos ; 46
+
+galleryFragment 42
+
+GalleryViewModel 42;48;49
+GalleryFragmnet 57
+
+
+------------------------------------------------------------------------------------------------------------|

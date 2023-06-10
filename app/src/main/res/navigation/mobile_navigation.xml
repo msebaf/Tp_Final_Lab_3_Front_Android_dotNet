@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.mapa.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_gallery"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.perfil.GalleryFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_gallery" />
+
+    <fragment
+        android:id="@+id/nav_slideshow"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.inmuebles.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_slideshow" />
+    <fragment
+        android:id="@+id/nav_propiedadesAlquiladas"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.Inquilinos.PropiedadesAlquiladasFragment"
+        android:label="fragment_propiedades_alquiladas"
+        tools:layout="@layout/fragment_propiedades_alquiladas" >
+        <action
+            android:id="@+id/action_nav_propiedadesAlquiladas_to_nav_detalle_inqui"
+            app:destination="@id/nav_detalle_inqui" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.contratos.ContratoFragment"
+        android:label="fragment_contrato"
+        tools:layout="@layout/fragment_contrato" />
+    <fragment
+        android:id="@+id/nav_salir"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.salir.SalirFragment"
+        android:label="fragment_salir"
+        tools:layout="@layout/fragment_salir" />
+
+
+    <activity
+        android:id="@+id/menuActivity"
+        android:name="com.miempresa.tp_final_lab_3_movil.MenuActivity"
+        android:label="app_bar_menu"
+        tools:layout="@layout/app_bar_menu" />
+
+    <fragment
+        android:id="@+id/nav_detalle_inqui"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.Inquilinos.DetalleInquilinoFragment"
+        android:label="fragment_detalle_inquilino"
+        tools:layout="@layout/fragment_detalle_inquilino" >
+        <action
+            android:id="@+id/action_nav_detalle_inqui_to_nav_propiedadesAlquiladas"
+            app:destination="@id/nav_propiedadesAlquiladas" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_deyalleInmuebleFragment"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.inmuebles.DeyalleInmuebleFragment"
+        android:label="fragment_deyalle_inmueble"
+        tools:layout="@layout/fragment_deyalle_inmueble" />
+    <fragment
+        android:id="@+id/nav_detalleContratoFragment"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.contratos.DetalleContratoFragment"
+        android:label="fragment_detalle_contrato"
+        tools:layout="@layout/fragment_detalle_contrato" >
+        <action
+            android:id="@+id/action_nav_detalleContratoFragment_to_nav_pagosFragment"
+            app:destination="@id/nav_pagosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pagosFragment"
+        android:name="com.miempresa.tp_final_lab_3_movil.ui.contratos.PagosFragment"
+        android:label="fragment_pagos"
+        tools:layout="@layout/fragment_pagos" >
+        <action
+            android:id="@+id/action_nav_pagosFragment_to_nav_detalleContratoFragment"
+            app:destination="@id/nav_detalleContratoFragment" />
+    </fragment>
+</navigation>
